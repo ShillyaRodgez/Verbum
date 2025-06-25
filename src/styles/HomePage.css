@@ -1,0 +1,239 @@
+/* Estilos gerais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  background-image: url('/bolinhas.png');
+  background-repeat: repeat;
+  background-size: 200px; /* Tamanho aumentado para que as bolinhas fiquem maiores */
+  background-blend-mode: normal; /* Alterado de 'lighten' para 'normal' para melhor contraste */
+  background-color: rgba(255, 255, 255, 0.3); /* Reduzido de 0.7 para 0.3 para escurecer o fundo */
+  filter: sepia(30%) hue-rotate(10deg); /* Adiciona um tom bege claro às bolinhas */
+  color: #000000;
+  overflow: hidden; /* Impede rolagem no body */
+}
+
+.homepage {
+  width: 100%;
+  height: 100vh; /* Altura fixa em vez de mínima */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* Impede rolagem na página inteira */
+}
+
+/* Cabeçalho */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.logo {
+  font-size: 3.5rem;
+  font-weight: bold;
+  font-family: 'Brush Script MT', cursive;
+  display: flex;
+  align-items: center;
+}
+
+.logo-image {
+  height: 90px;
+  width: auto;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.login-btn, .contact-btn {
+  padding: 10px 25px;
+  border-radius: 25px;
+  border: none;
+  background-color: #f8d0b0;
+  color: #000;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.login-btn:hover, .contact-btn:hover {
+  background-color: #f0b88e;
+}
+
+/* Conteúdo principal */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  overflow: hidden;
+}
+
+.content-container {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  gap: 100px;
+  height: 100%;
+  overflow: hidden;
+}
+
+.left-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.welcome {
+  font-size: 6rem;
+  color: #ffc107;
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+/* Seção Sobre */
+.about-section {
+  width: 300px;
+  height: 80%;
+  overflow: hidden;
+  text-align: center;
+  border-left: 1px solid #e0e0e0;
+  padding-left: 20px;
+  margin-bottom: 30px;
+}
+
+.about-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  position: sticky;
+  top: 0;
+  background-color: #ffffff;
+  padding: 5px 0;
+}
+
+.about-content {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 5px;
+  height: calc(100% - 50px); /* Ajustado para considerar as novas margens */
+  overflow-y: auto; /* Mantém a rolagem apenas nesta seção */
+  max-height: 80vh; /* Limita a altura máxima para garantir espaço no rodapé */
+}
+
+.about-content h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.about-content p {
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+/* Seção Versículo */
+.verse-section {
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out; /* Animação de fade in */
+}
+
+.verse-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.verse {
+  font-style: italic;
+  margin: 15px 0;
+  padding: 10px;
+  transition: transform 0.3s ease; /* Transição suave para hover */
+}
+
+.verse:hover {
+  transform: scale(1.02); /* Efeito sutil de zoom ao passar o mouse */
+}
+
+.verse-reference {
+  font-weight: bold;
+}
+
+/* Rodapé */
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  position: absolute;
+  bottom: 20px;
+  font-size: 0.9rem;
+}
+
+/* Animações */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Media queries para responsividade */
+@media (max-width: 768px) {
+  .header {
+    padding: 15px 20px;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .logo {
+    font-size: 2.5rem;
+  }
+  
+  .logo-image {
+    height: 70px;
+  }
+  
+  .content-container {
+    flex-direction: column;
+  }
+  
+  .welcome {
+    font-size: 4rem;
+    margin-bottom: 20px;
+  }
+  
+  .about-section {
+    width: 100%;
+    border-left: none;
+    border-top: 1px solid #e0e0e0;
+    padding-left: 0;
+    padding-top: 20px;
+  }
+  
+  /* Rodapé removido das media queries */
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 2rem;
+  }
+  
+  .logo-image {
+    height: 50px;
+  }
+  
+  .welcome {
+    font-size: 3rem;
+  }
+  
+  .nav-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
