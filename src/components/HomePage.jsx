@@ -265,19 +265,6 @@ const HomePage = () => {
     setDailyVerse(verses[verseIndex]);
   }, []);
   return (
-    <div className="container">
-      <header className="header">
-        <div className="logo-container">
-          <img src="/verbum-logo-new.svg" alt="Verbum Logo" className="logo" />
-          
-        </div>
-        <div className="header-buttons">
-          <button className="login-btn">Login</button>
-          <button className="contact-btn">Contato</button>
-        </div>
-      </header>
-
-      <main className="main-content">
         <div className="content-container">
           <div className="left-content">
             <h1 className="welcome">Bem-vindo!</h1>
@@ -293,11 +280,6 @@ const HomePage = () => {
           
 
         </div>
-      </main>
-
-      <footer className="footer">
-      </footer>
-    </div>
   );
 };
 
