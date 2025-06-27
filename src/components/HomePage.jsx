@@ -265,21 +265,16 @@ const HomePage = () => {
     setDailyVerse(verses[verseIndex]);
   }, []);
   return (
-        <div className="content-container">
-          <div className="left-content">
-            <h1 className="welcome">Bem-vindo!</h1>
-            
-            <div className="verse-section">
-              <h2>Versículo do dia:</h2>
-              <blockquote className="verse">
-                "{dailyVerse.text}"
-              </blockquote>
-              <p className="verse-reference">{dailyVerse.reference}</p>
-            </div>
-          </div>
-          
-
-        </div>
+    <>
+      <h1 className="welcome">Bem-vindo!</h1>
+      <div className="verse-section">
+        <h2>Versículo do dia:</h2>
+        <blockquote className="verse">
+          "{dailyVerse.text}"
+        </blockquote>
+        <p className="verse-reference">{dailyVerse.reference}</p>
+      </div>
+    </>
   );
 };
 

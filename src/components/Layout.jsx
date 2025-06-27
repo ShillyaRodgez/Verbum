@@ -13,7 +13,9 @@ const Layout = () => {
           <Link to="/" className="menu-item">Início</Link>
           <Link to="/about" className="menu-item">Sobre</Link>
           <Link to="/contact" className="menu-item">Contato</Link>
-          <button className="login-btn">Login</button>
+          <Link to="/login">
+            <button className="login-btn">Login</button>
+          </Link>
         </nav>
       </header>
       <main>
