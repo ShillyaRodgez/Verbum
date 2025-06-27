@@ -6,24 +6,23 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background-color: #ffffff;
+  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  background-color: #fafafa;
   background-image: url('/bolinhas.png');
   background-repeat: repeat;
-  background-size: 200px; /* Tamanho aumentado para que as bolinhas fiquem maiores */
-  background-blend-mode: normal; /* Alterado de 'lighten' para 'normal' para melhor contraste */
-  background-color: rgba(255, 255, 255, 0.3); /* Reduzido de 0.7 para 0.3 para escurecer o fundo */
-  filter: sepia(30%) hue-rotate(10deg); /* Adiciona um tom bege claro às bolinhas */
-  color: #000000;
-  overflow: hidden; /* Impede rolagem no body */
+  background-size: 200px;
+  background-blend-mode: soft-light;
+  color: #2d3748;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
 }
 
 .homepage {
   width: 100%;
-  height: 100vh; /* Altura fixa em vez de mínima */
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  overflow: hidden; /* Impede rolagem na página inteira */
 }
 
 /* Cabeçalho */
@@ -31,20 +30,10 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
-}
-
-.logo {
-  font-size: 3.5rem;
-  font-weight: bold;
-  font-family: 'Brush Script MT', cursive;
-  display: flex;
-  align-items: center;
-}
-
-.logo-image {
-  height: 90px;
-  width: auto;
+  padding: 0 40px;
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .nav-buttons {
@@ -52,19 +41,23 @@ body {
   gap: 20px;
 }
 
-.login-btn, .contact-btn {
-  padding: 10px 25px;
-  border-radius: 25px;
+.login-btn {
+  padding: 12px 28px;
+  border-radius: 12px;
   border: none;
-  background-color: #f8d0b0;
-  color: #000;
-  font-size: 1rem;
+  color: white;
+  font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-left: 10px;
+  background-color: #4a90e2;
 }
 
-.login-btn:hover, .contact-btn:hover {
-  background-color: #f0b88e;
+.login-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #357abd;
 }
 
 /* Conteúdo principal */
@@ -73,8 +66,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 40px 20px;
-  overflow: hidden;
+  padding: 40px 20px 20px 20px;
 }
 
 .content-container {
@@ -95,56 +87,28 @@ body {
 
 .welcome {
   font-size: 6rem;
-  color: #ffc107;
+  background: linear-gradient(45deg, #4a90e2, #357abd);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
   margin-bottom: 40px;
-  font-weight: bold;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Seção Sobre */
-.about-section {
-  width: 300px;
-  height: 80%;
-  overflow: hidden;
-  text-align: center;
-  border-left: 1px solid #e0e0e0;
-  padding-left: 20px;
-  margin-bottom: 30px;
-}
 
-.about-section h2 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-  position: sticky;
-  top: 0;
-  background-color: #ffffff;
-  padding: 5px 0;
-}
-
-.about-content {
-  background-color: #f5f5f5;
-  padding: 20px;
-  border-radius: 5px;
-  height: calc(100% - 50px); /* Ajustado para considerar as novas margens */
-  overflow-y: auto; /* Mantém a rolagem apenas nesta seção */
-  max-height: 80vh; /* Limita a altura máxima para garantir espaço no rodapé */
-}
-
-.about-content h3 {
-  font-size: 1.3rem;
-  margin-bottom: 10px;
-}
-
-.about-content p {
-  margin-bottom: 10px;
-  text-align: left;
-}
 
 /* Seção Versículo */
 .verse-section {
   width: 100%;
   max-width: 800px;
   text-align: center;
-  animation: fadeIn 1s ease-in-out; /* Animação de fade in */
+  padding: 40px 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-in-out;
 }
 
 .verse-section h2 {
@@ -154,13 +118,15 @@ body {
 
 .verse {
   font-style: italic;
-  margin: 15px 0;
-  padding: 10px;
-  transition: transform 0.3s ease; /* Transição suave para hover */
+  font-size: 1.25rem;
+  margin: 20px 0;
+  padding: 20px;
+  transition: transform 0.3s ease;
+  color: #4a5568;
 }
 
 .verse:hover {
-  transform: scale(1.02); /* Efeito sutil de zoom ao passar o mouse */
+  transform: scale(1.02);
 }
 
 .verse-reference {
@@ -171,9 +137,8 @@ body {
 .footer {
   width: 100%;
   text-align: center;
-  padding: 10px 0;
-  position: absolute;
-  bottom: 20px;
+  padding: 20px 0;
+  background-color: inherit;
   font-size: 0.9rem;
 }
 

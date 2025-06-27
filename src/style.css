@@ -23,11 +23,48 @@ a:hover {
 }
 
 body {
+  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  background-color: #fafafa;
+  background-image: url('/bolinhas.png');
+  background-repeat: repeat;
+  background-size: 200px;
+  background-blend-mode: soft-light;
+  color: #2d3748;
   margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+.logo {
+  font-size: 3.5rem;
+  font-weight: bold;
+  font-family: 'Brush Script MT', cursive;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  align-items: center;
+}
+
+.logo-image {
+  height: 90px;
+  width: auto;
+}
+
+.menu-bar {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.menu-item {
+  text-decoration: none;
+  color: #2d3748;
+  font-weight: 600;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.menu-item:hover {
+  background-color: #f0f0f0;
 }
 
 h1 {
@@ -36,24 +73,12 @@ h1 {
 }
 
 #app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #f7df1eaa);
-}
+
 
 .card {
   padding: 2em;
