@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, Outlet } from 'react-router-dom';
+import Footer from './Footer';
 import '../styles/HomePage.css';
 
 const Layout = () => {
@@ -18,9 +19,10 @@ const Layout = () => {
           </Link>
         </nav>
       </header>
-      <main>
+      <main style={{ paddingBottom: '3rem' }}>
         <Outlet />
       </main>
+      <Footer />
     </div>
   );
 };

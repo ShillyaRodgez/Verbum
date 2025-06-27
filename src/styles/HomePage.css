@@ -140,54 +140,40 @@ body {
 /* Media queries para responsividade */
 @media (max-width: 768px) {
   .header {
-    padding: 15px 20px;
     flex-direction: column;
+    padding: 20px;
+  }
+
+  .menu-bar {
+    flex-direction: column;
+    align-items: center;
     gap: 15px;
+    margin-top: 15px;
   }
-  
-  .logo {
-    font-size: 2.5rem;
+
+  .login-btn {
+    margin-left: 0;
   }
-  
-  .logo-image {
-    height: 70px;
+
+  .welcome-title {
+    font-size: 3rem;
   }
-  
-  .content-container {
-    flex-direction: column;
+
+  .verse-section {
+    padding: 20px;
   }
-  
-  .welcome {
-    font-size: 4rem;
-    margin-bottom: 20px;
-  }
-  
-  .about-section {
-    width: 100%;
-    border-left: none;
-    border-top: 1px solid #e0e0e0;
-    padding-left: 0;
-    padding-top: 20px;
-  }
-  
-  /* Rodapé removido das media queries */
 }
 
 @media (max-width: 480px) {
-  .logo {
-    font-size: 2rem;
+  .header {
+    padding: 15px;
   }
-  
-  .logo-image {
-    height: 50px;
+
+  .welcome-title {
+    font-size: 2.5rem;
   }
-  
-  .welcome {
-    font-size: 3rem;
-  }
-  
-  .nav-buttons {
-    flex-direction: column;
-    gap: 10px;
+
+  .menu-item {
+    font-size: 1rem;
   }
 }

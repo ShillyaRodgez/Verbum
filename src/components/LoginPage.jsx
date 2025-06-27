@@ -1,12 +1,21 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../styles/LoginPage.css';
 
 const LoginPage = () => {
+  const navigate = useNavigate();
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+    // Lógica de autenticação simulada
+    console.log('Login bem-sucedido');
+    navigate('/dashboard');
+  };
   return (
     <div className="login-page">
       <div className="login-container">
         <h2>Login</h2>
-        <form>
+        <form onSubmit={handleLogin}>
           <div className="input-group">
             <label htmlFor="email">Email</label>
             <input type="email" id="email" name="email" required />
@@ -17,9 +26,6 @@ const LoginPage = () => {
           </div>
           <button type="submit" className="login-submit-btn">Entrar</button>
         </form>
-        <p className="signup-link">
-          Não tem uma conta? <a href="#">Cadastre-se</a>
-        </p>
       </div>
     </div>
   );

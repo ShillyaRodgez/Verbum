@@ -1,0 +1,35 @@
+.dashboard-layout {
+  display: flex;
+}
+
+.dashboard-content {
+  flex-grow: 1;
+  padding: 2rem;
+  background-color: #f0f2f5;
+}
+
+.dashboard-page {
+  padding: 2rem;
+  background-color: #f0f2f5;
+}
+
+.dashboard-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-title {
+  font-size: 2rem;
+  color: #1890ff;
+  margin-bottom: 0.5rem;
+}
+
+.dashboard-subtitle {
+  font-size: 1.1rem;
+  color: #595959;
+  margin-bottom: 2rem;
+}

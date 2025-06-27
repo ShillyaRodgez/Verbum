@@ -5,6 +5,7 @@ import HomePage from './components/HomePage';
 import AboutPage from './components/AboutPage';
 import ContactPage from './components/ContactPage';
 import LoginPage from './components/LoginPage';
+import DashboardPage from './components/DashboardPage';
 import Layout from './components/Layout';
 import './style.css';
 
@@ -28,6 +29,19 @@ const router = createBrowserRouter([
       {
         path: 'login',
         element: <LoginPage />,
+      },
+      {
+        path: 'dashboard',
+        element: <DashboardPage />,
+        children: [
+          { path: 'meus-dados', element: <div>Meus Dados</div> },
+          { path: 'minha-turma', element: <div>Minha Turma</div> },
+          { path: 'falar-com-lider', element: <div>Falar com o Líder</div> },
+          { path: 'galeria', element: <div>Nossa Galeria</div> },
+          { path: 'recados', element: <div>Recados do Líder</div> },
+          { path: 'calendario', element: <div>Calendário</div> },
+          { path: 'edicao-atual', element: <div>Edição Atual</div> },
+        ]
       },
     ],
   },
