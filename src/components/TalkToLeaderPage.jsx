@@ -1,32 +1,17 @@
 import React, { useState, useEffect, useRef } from 'react';
 import '../styles/TalkToLeaderPage.css';
 
-// Mock user data (in a real app, this would come from auth context)
-const currentUser = { id: 1, name: 'Membro Exemplo', role: 'member' };
-const leader = { id: 100, name: 'Daniel', role: 'leader' };
-
-// Mock database of messages for a specific conversation
-const initialMessages = [
-  {
-    id: 1,
-    authorId: leader.id,
-    authorName: leader.name,
-    text: 'Oi Sheila! como posso ajudar?',
-    timestamp: 10:30,
-  },
-];
-
-// Mock API call to fetch messages
-const fetchMessages = async () => {
-  // Simulate network delay
-  await new Promise(resolve => setTimeout(resolve, 500));
-  return initialMessages;
-};
-
 const TalkToLeaderPage = () => {
-  const [messages, setMessages] = useState([]);
+  const [messages, setMessages] = useState([
+    {
+      id: 1,
+      authorName: 'Daniel',
+      text: 'Oi Sheila! como posso ajudar?',
+      timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+      isSent: false,
+    },
+  ]);
   const [newMessage, setNewMessage] = useState('');
-  const [isLoading, setIsLoading] = useState(true);
   const messagesEndRef = useRef(null);
 
   const scrollToBottom = () => {
@@ -34,47 +19,36 @@ const TalkToLeaderPage = () => {
   };
 
   useEffect(() => {
-    fetchMessages().then(data => {
-      setMessages(data);
-      setIsLoading(false);
-    });
-  }, []);
-
-  useEffect(() => {
     scrollToBottom();
   }, [messages]);
 
-  const handleSendMessage = async (e) => {
+  const handleSendMessage = (e) => {
     e.preventDefault();
     if (newMessage.trim() === '') return;
 
-    const messageData = {
-      id: Math.random(),
-      authorId: currentUser.id,
+    const userMessage = {
+      id: messages.length + 1,
       authorName: 'Você',
       text: newMessage,
       timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+      isSent: true,
     };
 
-    setMessages(prevMessages => [...prevMessages, messageData]);
+    setMessages((prevMessages) => [...prevMessages, userMessage]);
     setNewMessage('');
 
-    // Simulate leader's response after a delay
+    // Simula a resposta do líder
     setTimeout(() => {
       const leaderResponse = {
-        id: Math.random(),
-        authorId: leader.id,
-        authorName: leader.name,
-        text: 'Obrigado por avisar!',
+        id: messages.length + 2,
+        authorName: 'Daniel',
+        text: 'Obrigado pela sua mensagem! Responderei em breve.',
         timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+        isSent: false,
       };
-      setMessages(prevMessages => [...prevMessages, leaderResponse]);
+      setMessages((prevMessages) => [...prevMessages, leaderResponse]);
     }, 1500);
   };
-
-  if (isLoading) {
-    return <div className="loading-container">Carregando mensagens...</div>;
-  }
 
   return (
     <div className="talk-to-leader-container">
@@ -82,9 +56,9 @@ const TalkToLeaderPage = () => {
       <div className="chat-window">
         <div className="messages-list">
           {messages.map((msg) => (
-            <div key={msg.id} className={`message ${msg.authorId === currentUser.id ? 'sent' : 'received'}`}>
+            <div key={msg.id} className={`message ${msg.isSent ? 'sent' : 'received'}`}>
               <div className="message-bubble">
-                {msg.authorId !== currentUser.id && <p className="message-author">{msg.authorName}</p>}
+                <p className="message-author">{msg.authorName}</p>
                 <p className="message-text">{msg.text}</p>
                 <span className="message-timestamp">{msg.timestamp}</span>
               </div>
