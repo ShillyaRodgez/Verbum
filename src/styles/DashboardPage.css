@@ -19,17 +19,17 @@
   padding: 2rem;
   background-color: #ffffff;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(183, 146, 146, 0.95);
 }
 
 .dashboard-title {
   font-size: 2rem;
-  color: #1890ff;
+  color: #a9998f;
   margin-bottom: 0.5rem;
 }
 
 .dashboard-subtitle {
   font-size: 1.1rem;
-  color: #595959;
+  color: #7d6161;
   margin-bottom: 2rem;
 }

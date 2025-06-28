@@ -1,9 +1,79 @@
 .sidebar {
-  width: 250px;
-  background-color: #001529;
+  width: 220px;
+  background-color: #b6a89f;
   color: #ffffff;
   height: 100vh;
   padding-top: 1rem;
+  transition: width 0.6s ease;
+  position: relative;
+}
+
+.sidebar.collapsed {
+  width: 70px;
+}
+
+.sidebar-nav li a span {
+  white-space: nowrap;
+  overflow: hidden;
+  transition: width 0.2s ease 0.1s, opacity 0.2s ease;
+}
+
+.sidebar.collapsed .sidebar-nav li a span {
+  width: 0;
+  opacity: 0;
+}
+
+.sidebar.collapsed .sidebar-nav li a {
+  justify-content: center;
+}
+
+.toggle-btn {
+    background: none;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    width: 100%;
+}
+
+.toggle-btn:focus {
+    outline: none;
+}
+
+
+.sidebar.collapsed .toggle-btn {
+    justify-content: center;
+}
+
+.profile-section {
+  padding:  0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: padding 0.3s ease;
+}
+
+.profile-pic {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #8c6b58; /* Cor de placeholder */
+  transition: width 0.3s ease, height 0.3s ease;
+  background-size: cover;
+  background-position: center;
+}
+
+.sidebar.collapsed .profile-section {
+  padding: 15px 0;
+}
+
+.sidebar.collapsed .profile-pic {
+  width: 40px;
+  height: 40px;
 }
 
 .sidebar-nav ul {
@@ -13,15 +83,25 @@
 }
 
 .sidebar-nav li a {
-  display: block;
+  display: flex;
+  align-items: center;
   padding: 1rem 1.5rem;
-  color: #a6adb4;
+  color: #ffffff;
   text-decoration: none;
   font-size: 1rem;
   transition: background-color 0.3s, color 0.3s;
 }
 
-.sidebar-nav li a:hover {
-  background-color: #1890ff;
+.sidebar-nav li a svg {
+  margin-right: 10px;
+}
+
+.sidebar.collapsed .sidebar-nav li a svg {
+  margin-right: 0;
+}
+
+.sidebar-nav li a:hover,
+.sidebar-nav li a.active {
+  background-color: #8c6b58;
   color: #ffffff;
 }
