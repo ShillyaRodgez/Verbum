@@ -16,7 +16,7 @@
 .sidebar-nav li a span {
   white-space: nowrap;
   overflow: hidden;
-  transition: width 0.2s ease 0.1s, opacity 0.2s ease;
+  transition: opacity 0.2s ease, width 0.3s ease 0.1s;
 }
 
 .sidebar.collapsed .sidebar-nav li a span {

@@ -4,6 +4,7 @@ import '../styles/MyDataPage.css';
 const MyDataPage = () => {
   return (
     <div className="my-data-container">
+      <h1 className="welcome-message">Bem-Vindo(a), Sheila!</h1>
       <div className="profile-section-data">
         <div className="profile-pic-container">
           <img src="/paraperfil.jpg" alt="Foto de Perfil" className="profile-pic-data" />

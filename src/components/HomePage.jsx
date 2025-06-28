@@ -266,7 +266,7 @@ const HomePage = () => {
   }, []);
   return (
     <>
-      <h1 className="welcome">Bem-vindo!</h1>
+      <h1 className="welcome animated-welcome">Bem-vindo!</h1>
       <div className="verse-section">
         <h2>Versículo do dia:</h2>
         <blockquote className="verse">

@@ -1,3 +1,22 @@
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.welcome-message {
+  text-align: center;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 2rem;
+  animation: fadeInDown 1s ease-in-out;
+}
+
 .my-data-container {
   padding: 2rem;
   max-width: 800px;

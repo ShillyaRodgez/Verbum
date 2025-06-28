@@ -84,6 +84,19 @@ body.dashboard-view {
 /* Conteúdo principal */
 
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animated-welcome {
+  animation: fadeIn 1.5s ease-in-out;
+}
+
 .welcome {
   font-size: 6rem;
   background: linear-gradient(45deg, #feddc8, #3F3923);
