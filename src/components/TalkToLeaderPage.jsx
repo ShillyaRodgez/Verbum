@@ -11,11 +11,7 @@ const initialMessages = [
     id: 1,
     authorId: leader.id,
     authorName: leader.name,
-import meuLogo from '../assets/images/logo.png';
-
-function Header() {
-  return <img src={meuLogo} alt="Logo" />;
-}    text: 'Oi Sheila! como posso ajudar?',
+    text: 'Oi Sheila! como posso ajudar?',
     timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
   },
 ];
