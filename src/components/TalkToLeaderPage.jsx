@@ -12,7 +12,7 @@ const initialMessages = [
     authorId: leader.id,
     authorName: leader.name,
     text: 'Oi Sheila! como posso ajudar?',
-    timestamp: '10:30',
+    timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),,
   },
 ];
 
