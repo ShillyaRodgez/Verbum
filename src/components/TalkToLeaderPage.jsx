@@ -8,7 +8,7 @@ const TalkToLeaderPage = () => {
       authorName: 'Daniel',
       text: 'Oi Sheila! como posso ajudar?',
       timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
-      isSent: false,
+      isSent: true,
     },
   ]);
   const [newMessage, setNewMessage] = useState('');
