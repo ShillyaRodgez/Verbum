@@ -10,13 +10,7 @@ const initialMessages = [
   {
     id: 1,
     authorId: leader.id,
-// Antes (se a imagem estivesse em public)
-// <img src="/paraperfil.jpg" alt="Foto de Perfil" />
-
-// Depois (com a imagem em src/assets/images)
-import profilePic from '../assets/images/paraperfil.jpg';
-// ...
-<img src={profilePic} alt="Foto de Perfil" />    authorName: leader.name,
+    authorName: leader.name,
     text: 'Oi Sheila! como posso ajudar?',
     timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
   },
