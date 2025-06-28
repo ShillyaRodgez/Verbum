@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link, Outlet, useLocation } from 'react-router-dom';
 import Footer from './Footer';
+import logo from '/Imagem3.png';
 import '../styles/HomePage.css';
 
 const Layout = () => {
@@ -27,7 +28,7 @@ const Layout = () => {
     <div className="site-container">
       <header className="header">
         <div className="logo">
-          <img src="/Imagem3.png" alt="Verbum Logo" className="logo-image" />
+          <img src={logo} alt="Verbum Logo" className="logo-image" />
         </div>
         <nav className="menu-bar">
           <Link to="/" className="menu-item">Início</Link>
