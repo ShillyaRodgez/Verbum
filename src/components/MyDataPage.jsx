@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/MyDataPage.css';
-import profilePic from '/paraperfil.jpg';
+import profilePic from '../assets/images/paraperfil.jpg';
 
 const MyDataPage = () => {
   return (
