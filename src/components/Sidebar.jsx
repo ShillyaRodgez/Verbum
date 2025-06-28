@@ -10,7 +10,9 @@ const Sidebar = ({ isCollapsed, toggleSidebar }) => {
         <ul>
           <li><button className="toggle-btn" onClick={toggleSidebar}><FaBars /></button></li>
           <li className="profile-section">
-            <div className="profile-pic"></div>
+            <div className="profile-pic">
+              <img src="/paraperfil.jpg" alt="Foto de Perfil" />
+            </div>
           </li>
           <li><NavLink to="/dashboard/meus-dados" className={({ isActive }) => (isActive ? 'active' : '')}><FaUser /> <span>Meus Dados</span></NavLink></li>
           <li><NavLink to="/dashboard/minha-turma" className={({ isActive }) => (isActive ? 'active' : '')}><FaUsers /> <span>Minha Turma</span></NavLink></li>

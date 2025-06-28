@@ -3,14 +3,24 @@ import '../styles/MyClassPage.css';
 
 const MyClassPage = () => {
   const leaders = [
-    { name: 'Líder 1', photo: 'https://i.pravatar.cc/100?img=1' },
-    { name: 'Líder 2', photo: 'https://i.pravatar.cc/100?img=2' },
+    { name: 'Daniel Mertz', photo: 'https://i.pravatar.cc/100?img=50' },
+    { name: 'Valéria Evangelista', photo: 'https://i.pravatar.cc/100?img=45' },
   ];
 
-  const members = Array.from({ length: 10 }, (_, i) => ({
-    name: `Membro ${i + 1}`,
-    photo: `https://i.pravatar.cc/100?img=${i + 3}`,
-  }));
+  const members = [
+    { name: 'Amanda', photo: 'https://i.pravatar.cc/100?img=31' },
+    { name: 'Júlia', photo: 'https://i.pravatar.cc/100?img=32' },
+    { name: 'Gustavo Melotto', photo: 'https://i.pravatar.cc/100?img=33' },
+    { name: 'Gustavo', photo: 'https://i.pravatar.cc/100?img=70' },
+    { name: 'Ieda', photo: 'https://i.pravatar.cc/100?img=35' },
+    { name: 'Jéssica', photo: 'https://i.pravatar.cc/100?img=36' },
+    { name: 'Rafaela', photo: 'https://i.pravatar.cc/100?img=37' },
+    { name: 'Michely', photo: 'https://i.pravatar.cc/100?img=38' },
+    { name: 'André', photo: 'https://i.pravatar.cc/100?img=60' },
+    { name: 'Alessandro', photo: 'https://i.pravatar.cc/100?img=59' },
+    { name: 'Sheila', photo: 'https://i.pravatar.cc/100?img=41' },
+    { name: 'Edilaine', photo: 'https://i.pravatar.cc/100?img=42' },
+  ];
 
   return (
     <div className="my-class-container">

@@ -3,7 +3,7 @@ import '../styles/TalkToLeaderPage.css';
 
 // Mock user data (in a real app, this would come from auth context)
 const currentUser = { id: 1, name: 'Membro Exemplo', role: 'member' };
-const leader = { id: 100, name: 'Líder', role: 'leader' };
+const leader = { id: 100, name: 'Daniel', role: 'leader' };
 
 // Mock database of messages for a specific conversation
 const initialMessages = [
@@ -11,7 +11,7 @@ const initialMessages = [
     id: 1,
     authorId: leader.id,
     authorName: leader.name,
-    text: 'Olá! Em que posso ajudar?',
+    text: 'Oi Sheila! como posso ajudar?',
     timestamp: '10:30',
   },
 ];
@@ -65,7 +65,7 @@ const TalkToLeaderPage = () => {
         id: Math.random(),
         authorId: leader.id,
         authorName: leader.name,
-        text: 'Obrigado pela sua pergunta. Vou verificar e retorno em breve.',
+        text: 'Obrigado por avisar!',
         timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
       };
       setMessages(prevMessages => [...prevMessages, leaderResponse]);

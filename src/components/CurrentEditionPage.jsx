@@ -4,14 +4,14 @@ import coverImage from '/capinha.jpg'; // Import the cover image
 
 // Mock data for the current edition
 const currentEdition = {
-  title: 'Verbum - Edição de Verão 2024',
-  theme: 'Renovação e Esperança',
+  title: 'Verbum - Edição 2025',
+  theme: 'Famílias imperfeitas, Graça perfeita',
   coverImage: coverImage,
   articles: [
-    { id: 1, title: 'O Despertar da Liderança Jovem', author: 'Carlos Silva' },
-    { id: 2, title: 'Fé em Tempos de Incerteza', author: 'Maria Fernandes' },
-    { id: 3, title: 'A Comunidade como Força Motriz', author: 'João Pereira' },
-    { id: 4, title: 'Testemunhos de Transformação', author: 'Ana Costa' },
+    { id: 1, title: 'Inventário Pessoal', author: '03 de junho de 2025' },
+    { id: 2, title: 'GPS da Fé: Quando Deus é o Guia', author: '10 de junho de 2025' },
+    { id: 3, title: 'Jesus e a re-interpretação da Lei', author: '17 de junho de 2025' },
+    { id: 4, title: 'Aguardando o título...', author: '...' },
   ],
 };
 
