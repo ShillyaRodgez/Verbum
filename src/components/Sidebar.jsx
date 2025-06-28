@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { FaUser, FaUsers, FaComment, FaImages, FaBullhorn, FaCalendarAlt, FaBook, FaBars } from 'react-icons/fa';
+import { FaHome, FaUser, FaUsers, FaComment, FaImages, FaBullhorn, FaCalendarAlt, FaBook, FaBars } from 'react-icons/fa';
 import '../styles/Sidebar.css';
 
 const Sidebar = ({ isCollapsed, toggleSidebar }) => {
@@ -14,6 +14,7 @@ const Sidebar = ({ isCollapsed, toggleSidebar }) => {
               <img src="/paraperfil.jpg" alt="Foto de Perfil" />
             </div>
           </li>
+          <li><NavLink to="/dashboard/inicio" className={({ isActive }) => (isActive ? 'active' : '')}><FaHome /> <span>Início</span></NavLink></li>
           <li><NavLink to="/dashboard/meus-dados" className={({ isActive }) => (isActive ? 'active' : '')}><FaUser /> <span>Meus Dados</span></NavLink></li>
           <li><NavLink to="/dashboard/minha-turma" className={({ isActive }) => (isActive ? 'active' : '')}><FaUsers /> <span>Minha Turma</span></NavLink></li>
           <li><NavLink to="/dashboard/falar-com-lider" className={({ isActive }) => (isActive ? 'active' : '')}><FaComment /> <span>Falar com o Líder</span></NavLink></li>

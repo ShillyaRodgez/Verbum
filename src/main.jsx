@@ -41,6 +41,8 @@ const router = createBrowserRouter([
         path: 'dashboard',
         element: <DashboardPage />,
         children: [
+          { index: true, element: <HomePage /> },
+          { path: 'inicio', element: <HomePage /> },
           { path: 'meus-dados', element: <MyDataPage /> },
           { path: 'minha-turma', element: <MyClassPage /> },
           { path: 'falar-com-lider', element: <TalkToLeaderPage /> },
