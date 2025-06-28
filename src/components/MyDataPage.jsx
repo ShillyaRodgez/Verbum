@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/MyDataPage.css';
+import profilePic from '/paraperfil.jpg';
 
 const MyDataPage = () => {
   return (
@@ -7,7 +8,7 @@ const MyDataPage = () => {
       <h1 className="welcome-message">Bem-Vindo(a), Sheila!</h1>
       <div className="profile-section-data">
         <div className="profile-pic-container">
-          <img src="/paraperfil.jpg" alt="Foto de Perfil" className="profile-pic-data" />
+          <img src={profilePic} alt="Foto de Perfil" className="profile-pic-data" />
           <button className="edit-pic-btn">Editar Foto</button>
         </div>
       </div>
