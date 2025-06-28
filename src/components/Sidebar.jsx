@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { FaHome, FaUser, FaUsers, FaComment, FaImages, FaBullhorn, FaCalendarAlt, FaBook, FaBars } from 'react-icons/fa';
-import '../styles/Sidebar.css';
+import styles from '../styles/Sidebar.module.css';
 import profilePic from '/paraperfil.jpg';
 
 const Sidebar = ({ isCollapsed, toggleSidebar }) => {
@@ -30,3 +30,12 @@ const Sidebar = ({ isCollapsed, toggleSidebar }) => {
 };
 
 export default Sidebar;
+
+function Sidebar() {
+  return (
+    // Antes: className="sidebar"
+    <aside className={styles.sidebar}>
+      {/* ... */}
+    </aside>
+  );
+}

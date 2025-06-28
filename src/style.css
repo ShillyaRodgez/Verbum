@@ -72,6 +72,16 @@ h1 {
   line-height: 1.1;
 }
 
+.site-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.site-content {
+  flex-grow: 1;
+}
+
 html, body, #root {
   height: 100%;
   margin: 0;
