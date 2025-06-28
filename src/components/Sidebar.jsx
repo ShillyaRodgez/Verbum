@@ -2,6 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { FaHome, FaUser, FaUsers, FaComment, FaImages, FaBullhorn, FaCalendarAlt, FaBook, FaBars } from 'react-icons/fa';
 import '../styles/Sidebar.css';
+import profilePic from '/paraperfil.jpg';
 
 const Sidebar = ({ isCollapsed, toggleSidebar }) => {
   return (
@@ -11,7 +12,7 @@ const Sidebar = ({ isCollapsed, toggleSidebar }) => {
           <li><button className="toggle-btn" onClick={toggleSidebar}><FaBars /></button></li>
           <li className="profile-section">
             <div className="profile-pic">
-              <img src="/paraperfil.jpg" alt="Foto de Perfil" />
+              <img src={profilePic} alt="Foto de Perfil" />
             </div>
           </li>
           <li><NavLink to="/dashboard/inicio" className={({ isActive }) => (isActive ? 'active' : '')}><FaHome /> <span>Início</span></NavLink></li>
