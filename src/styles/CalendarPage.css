@@ -1,0 +1,72 @@
+.calendar-container {
+  padding: 2rem;
+}
+
+.calendar-title {
+  font-size: 2rem;
+  color: #a9998f;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.events-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.event-item {
+  display: flex;
+  align-items: flex-start;
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.event-date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #a9998f;
+  color: white;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-right: 1.5rem;
+  min-width: 80px;
+}
+
+.event-day {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.event-month {
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.event-details {
+  flex-grow: 1;
+}
+
+.event-title {
+  font-size: 1.25rem;
+  color: #7d6161;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.event-time {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.event-description {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #555;
+  margin: 0;
+}

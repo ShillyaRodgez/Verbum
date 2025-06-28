@@ -1,0 +1,43 @@
+.leader-messages-container {
+  padding: 2rem;
+}
+
+.messages-title {
+  font-size: 2rem;
+  color: #a9998f;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.messages-list {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.message-card {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-left: 5px solid #a9998f;
+}
+
+.message-card-title {
+  font-size: 1.25rem;
+  color: #7d6161;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.message-card-date {
+  font-size: 0.85rem;
+  color: #999;
+  margin-bottom: 1rem;
+}
+
+.message-card-content {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+  margin: 0;
+}

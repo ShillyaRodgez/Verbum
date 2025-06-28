@@ -1,0 +1,79 @@
+.my-data-container {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.my-data-container h2 {
+  color: #8c6b58;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+}
+
+.profile-section-data {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.profile-pic-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.profile-pic-data {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #b6a89f;
+}
+
+.edit-pic-btn {
+  background-color: #8c6b58;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s;
+}
+
+.edit-pic-btn:hover {
+  background-color: #6d513f;
+}
+
+.data-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  color: #8c6b58;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.form-group input {
+  padding: 0.6rem;
+  border: 1px solid #b6a89f;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  background-color: #f5f5f5;
+  color: #666;
+}
+
+.form-group input:disabled {
+  cursor: not-allowed;
+  opacity: 0.8;
+}

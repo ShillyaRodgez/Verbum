@@ -6,6 +6,13 @@ import AboutPage from './components/AboutPage';
 import ContactPage from './components/ContactPage';
 import LoginPage from './components/LoginPage';
 import DashboardPage from './components/DashboardPage';
+import MyDataPage from './components/MyDataPage';
+import MyClassPage from './components/MyClassPage';
+import TalkToLeaderPage from './components/TalkToLeaderPage';
+import GalleryPage from './components/GalleryPage';
+import LeaderMessagesPage from './components/LeaderMessagesPage';
+import CalendarPage from './components/CalendarPage';
+import CurrentEditionPage from './components/CurrentEditionPage';
 import Layout from './components/Layout';
 import './style.css';
 
@@ -34,13 +41,13 @@ const router = createBrowserRouter([
         path: 'dashboard',
         element: <DashboardPage />,
         children: [
-          { path: 'meus-dados', element: <div>Meus Dados</div> },
-          { path: 'minha-turma', element: <div>Minha Turma</div> },
-          { path: 'falar-com-lider', element: <div>Falar com o Líder</div> },
-          { path: 'galeria', element: <div>Nossa Galeria</div> },
-          { path: 'recados', element: <div>Recados do Líder</div> },
-          { path: 'calendario', element: <div>Calendário</div> },
-          { path: 'edicao-atual', element: <div>Edição Atual</div> },
+          { path: 'meus-dados', element: <MyDataPage /> },
+          { path: 'minha-turma', element: <MyClassPage /> },
+          { path: 'falar-com-lider', element: <TalkToLeaderPage /> },
+          { path: 'galeria', element: <GalleryPage /> },
+          { path: 'recados', element: <LeaderMessagesPage /> },
+          { path: 'calendario', element: <CalendarPage /> },
+          { path: 'edicao-atual', element: <CurrentEditionPage /> },
         ]
       },
     ],
